@@ -3,9 +3,8 @@ function showPadAds(link, title, imageURL) {
 }
 
 function loadPadAds() {
-	var getRandom = Math.floor(Math.random() * database.length);
-    showPadAds(database[getRandom].l, database[getRandom].t, database[getRandom].i);
+	var getRandom = Math.floor(Math.random() * padAdsDb.length);
+    showPadAds(padAdsDb[getRandom].l, padAdsDb[getRandom].t, padAdsDb[getRandom].i);
 }
 
-var database = [];
-loadPadAds();
+var padAdsDb = [];
