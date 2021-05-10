@@ -38,9 +38,10 @@ for (var i = 0; i < links.length; i++)
 var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://piecablog.blogspot.com/2021/04/tui-la-ai.html#dangkiqc',
     adsRegisterTitle = 'Bấm vào chữ Được tài trợ để tìm hiểu thêm', 
-    padAdsDb = [];
+    padAdsDb = [
+	    {l: 'https://phonglan123.github.io/pad/', i: 'https://i.ytimg.com/vi/ER126fHr-Oc/maxresdefault.jpg', t: 'Quảng cáo PADAD - Xem free'}
+    ];
 
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
-padAdsDb.push({l: 'https://phonglan123.github.io/pad/', i: 'https://i.ytimg.com/vi/ER126fHr-Oc/maxresdefault.jpg', t: 'Quảng cáo PADAD - Xem free'});
-loadPadAds();
+setTimeout(loadPadAds, 1000);
