@@ -43,4 +43,4 @@ var adsAlert = 'Được tài trợ',
 
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
-setTimeout(showPadAds, 2000);
+setTimeout(showPadAds, 1000);
