@@ -3,6 +3,24 @@
 setTimeout(() => location.reload(), 10000);
 </script>
 
+<!-- Adblock detect -->
+<script>
+async function detectAdBlock() {
+  let adBlockEnabled = false
+  try {
+    await fetch(new Request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')).catch(_ => adBlockEnabled = true)
+  } catch (e) {
+    adBlockEnabled = true
+  } finally {
+    if(adBlockEnabled) {
+	    alert('Vui lòng tắt trình chặn quảng cáo (Please turn off the Adblock)');
+	    window.location.reload();
+    }
+  }
+}
+detectAdBlock()
+</script>
+
 <!-- A-ads -->
 <iframe data-aa="1629012" src="//ad.a-ads.com/1629012?size=728x90" scrolling="no" style="width:728px; height:90px; border:0px; padding:0; overflow:hidden" allowtransparency="true"></iframe>
 
