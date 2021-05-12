@@ -126,8 +126,8 @@ var adsAlert = 'Được tài trợ',
         t: 'Quảng cáo PADAD - Xem free'
     }],
     padAdsVideoDb = [{
-        l: 'https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic',
-        v: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        l: 'https://phonglan123.github.io/pad/',
+        v: 'https://a.uguu.se/voFkxbQL.mp4',
         t: 'Quảng cáo PADAD - Xem free'
     }];
 
