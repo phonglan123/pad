@@ -37,7 +37,7 @@ for (var i = 0; i < links.length; i++)
 	}
 
 var adsAlert = 'Được tài trợ',
-    adsRegisterLink = 'https://piecablog.blogspot.com/2021/04/tui-la-ai.html#dangkiqc',
+    adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
     adsRegisterTitle = 'Bấm vào chữ Được tài trợ để tìm hiểu thêm', 
     padAdsDb = [
 	    {l: 'https://phonglan123.github.io/pad/', i: 'https://i.ytimg.com/vi/ER126fHr-Oc/maxresdefault.jpg', t: 'Quảng cáo PADAD - Xem free'}
