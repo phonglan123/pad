@@ -13,8 +13,8 @@ async function detectAdBlock() {
     adBlockEnabled = true
   } finally {
     if(adBlockEnabled) {
-	    alert('Vui lòng tắt trình chặn quảng cáo (Please turn off the Adblock)');
-	    window.location.reload();
+	    alert('Vui lòng tắt trình chặn quảng cáo. Thông báo này sẽ hiển thị lại trong 10 giây (Please turn off the Adblock. This alert will show agian in 10 seconds)');
+	    setTimeout(() => location.reload(), 10000);
     }
   }
 }
