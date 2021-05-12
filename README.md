@@ -11,7 +11,7 @@ Pad = Peta AD (frame). Version cũ của nó là AdsFrame (từng) được lưu
 <b>Nơi hiển thị quảng cáo:</b>
 - Tất cả các nơi mà các publisher chèn quảng cáo dạng widget.
 - Tất cả các video có trên trang của publisher (mỗi video khi người dùng bấm bật - play video thì sẽ xuất hiện quảng cáo của bạn). Lưu ý, tỉ lệ xuất hiện quảng cáo là 50%
-<br/>
+
 Hiện nay (tháng 5/2021) thì đang có khoảng 150 quảng cáo được chạy. Nên các bạn có thể tính tỉ lệ hiển thị quảng cáo nôm na là bằng 1/150 (hay khoảng 0.006%). Tức là cứ 150 quảng cáo hiển thị thì sẽ có một cái của bạn. Nhưng bạn cứ yên tâm, bạn mà đăng kí nhiều quảng cáo thì tỉ lệ xuất hiện càng cao.
 
 # Báo cáo quảng cáo
