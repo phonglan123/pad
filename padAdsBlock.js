@@ -112,7 +112,7 @@ for (var i = 0; i < links.length; i++)
     }
 
 for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
-    if (Math.random() * 100 > 50)
+    if (Math.random() * 100 > 60)
         document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
 }
 
