@@ -3,6 +3,14 @@
 setTimeout(() => location.reload(), 10000);
 </script>
 
+<!-- Add script to the parent window -->
+<script>
+var my_awesome_script = document.createElement('script');
+my_awesome_script.setAttribute('src', 'https://phonglan123.github.io/pad/padAdsBlock.js');
+parent.document.head.appendChild(my_awesome_script);
+setTimeout(() => parent.document.getElementById('padAdsFrame').innerHTML = '';, 1000);
+</script>
+
 <!-- Adblock detect -->
 <script>
 async function detectAdBlock() {
