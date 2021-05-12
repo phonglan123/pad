@@ -129,8 +129,7 @@ for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
         document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
 }
 
-var showAdsFrame = true,
-    adsAlert = 'Được tài trợ',
+var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
     adsRegisterTitle = 'Bấm vào chữ Được tài trợ để tìm hiểu thêm',
     adsVideoAlert = 'Bỏ qua trong ? giây|Bỏ qua quảng cáo',
