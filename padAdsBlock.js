@@ -42,7 +42,7 @@ function showPadAds() {
         imageURL = padAdsDb[getRandom].i,
         elms = document.querySelectorAll("[id='padAdsBlock']");
     for (var i = 0; i < elms.length; i++)
-        elms[i].innerHTML = '<div id="padAdsFrame"></div><div style="border: 1px solid #ccc; height: 70px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; margin-top: 16px; background: white" title="' + adsRegisterTitle + '"> <div style="margin-left: 5px; border: 1px solid #ccc; background: white; margin-top: -10px; width: 100px; text-align: center" onclick="window.open(' + "'" + adsRegisterLink + "'" + '); showPadAds();">' + adsAlert + '</div> <div onclick="window.open(' + "'" + link + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 50px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -60px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + title + '</b></div><div style="width: calc(100% - 115px); overflow: hidden; margin-top: 0px; margin-left: 110px; white-space: nowrap;">' + new URL(link).hostname + '</div></div></div>';
+        elms[i].innerHTML = '<div id="padAdsFrame"><iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe></div><div style="border: 1px solid #ccc; height: 70px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; margin-top: 16px; background: white" title="' + adsRegisterTitle + '"> <div style="margin-left: 5px; border: 1px solid #ccc; background: white; margin-top: -10px; width: 100px; text-align: center" onclick="window.open(' + "'" + adsRegisterLink + "'" + '); showPadAds();">' + adsAlert + '</div> <div onclick="window.open(' + "'" + link + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 50px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -60px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + title + '</b></div><div style="width: calc(100% - 115px); overflow: hidden; margin-top: 0px; margin-left: 110px; white-space: nowrap;">' + new URL(link).hostname + '</div></div></div>';
 }
 
 function addScript(src) {
@@ -128,9 +128,6 @@ for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
     if (Math.random() * 100 > 60)
         document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
 }
-    
-if (showAdsFrame)
-    document.getElementById('padAdsFrame').innerHTML = '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe>';
 
 var showAdsFrame = true,
     adsAlert = 'Được tài trợ',
