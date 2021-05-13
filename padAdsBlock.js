@@ -108,21 +108,6 @@ function loadVideoAd(video) {
     video.onended = endTheAd;
 }
 
-function getDatabase() {
-    adsBlockDb.forEach(entry => padAdsDb.push({
-        l: entry.split(' | ')[0],
-        i: entry.split(' | ')[1],
-        t: entry.split(' | ')[2]
-    }));
-    adsVideoDb.forEach(entry => padAdsVideoDb.push({
-        l: entry.split(' | ')[0],
-        v: entry.split(' | ')[1],
-        t: entry.split(' | ')[2]
-    }));
-    padAdsDb = padAdsDb.sort(() => Math.random() - 0.5);
-    padAdsVideoDb = padAdsVideoDb.sort(() => Math.random() - 0.5);
-}
-
 var links = document.getElementsByTagName("A"),
     linksExcept = ['googleusercontent.com', 'blogspot.com', 'blogger'],
     includesExtra = (originalString, queries) => {
