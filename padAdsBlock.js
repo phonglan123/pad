@@ -146,7 +146,7 @@ var adsAlert = 'Được tài trợ',
 
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
-addScript('https://desnetnhaponline.blogspot.com/');
+addScript('https://desnetnhaponline.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 setTimeout(showPadAds, 500);
 adBlockDetect();
