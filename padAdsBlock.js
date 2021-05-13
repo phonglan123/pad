@@ -139,7 +139,7 @@ function docLoaded() {
         };
 
     for (var i = 0; i < links.length; i++)
-        if (links[i].href.includes("http") && !includesExtra(links[i].href, linksExcept)) {
+        if (links[i].href.includes("http") && !includesExtra(new URL(links[i].href).hostname, linksExcept)) {
             links[i].href = 'https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(links[i].href);
             links[i].target = "_blank";
             if (links[i].innerHTML.includes("http"))
