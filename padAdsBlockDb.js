@@ -9,3 +9,15 @@ var adsBlockDb = [
         'https://phonglan123.github.io/pad/ | https://a.uguu.se/voFkxbQL.mp4 | Quảng cáo PADAD - Xem free'
 
     ];
+adsBlockDb.forEach(entry => padAdsDb.push({
+    l: entry.split(' | ')[0],
+    i: entry.split(' | ')[1],
+    t: entry.split(' | ')[2]
+}));
+adsVideoDb.forEach(entry => padAdsVideoDb.push({
+    l: entry.split(' | ')[0],
+    v: entry.split(' | ')[1],
+    t: entry.split(' | ')[2]
+}));
+padAdsDb = padAdsDb.sort(() => Math.random() - 0.5);
+padAdsVideoDb = padAdsVideoDb.sort(() => Math.random() - 0.5);
