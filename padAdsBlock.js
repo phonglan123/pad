@@ -35,21 +35,7 @@ async function adBlockDetect() {
     }
 }
 
-function shuffle(array) {
-    var currentIndex = array.length,
-        temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
-
 function showPadAds() {
-    shuffle(padAdsDb);
     var getRandom = Math.floor(Math.random() * padAdsDb.length),
         link = padAdsDb[getRandom].l,
         title = padAdsDb[getRandom].t,
@@ -74,7 +60,6 @@ function desnetRssCb(json) {
 }
 
 function loadVideoAd(video) {
-    shuffle(padAdsVideoDb);
     var getRandom = Math.floor(Math.random() * padAdsVideoDb.length),
         adSrc = padAdsVideoDb[getRandom].v,
         adLink = padAdsVideoDb[getRandom].l,
@@ -123,6 +108,21 @@ function loadVideoAd(video) {
     video.onended = endTheAd;
 }
 
+function getDatabase() {
+    adsBlockDb.forEach(entry => padAdsDb.push({
+        l: entry.split(' | ')[0],
+        i: entry.split(' | ')[1],
+        t: entry.split(' | ')[2]
+    }));
+    adsVideoDb.forEach(entry => padAdsVideoDb.push({
+        l: entry.split(' | ')[0],
+        v: entry.split(' | ')[1],
+        t: entry.split(' | ')[2]
+    }));
+    padAdsDb = padAdsDb.sort(() => Math.random() - 0.5);
+    padAdsVideoDb = padAdsVideoDb.sort(() => Math.random() - 0.5);
+}
+
 var links = document.getElementsByTagName("A"),
     linksExcept = ['googleusercontent.com', 'blogspot.com', 'blogger'],
     includesExtra = (originalString, queries) => {
@@ -151,6 +151,7 @@ addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 setTimeout(showPadAds, 500);
 adBlockDetect();
+getDatabase();
 
 var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
