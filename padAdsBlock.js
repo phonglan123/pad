@@ -36,6 +36,7 @@ async function adBlockDetect() {
 }
 
 function showPadAds() {
+    padAdsDb = padAdsDb.sort(() => Math.random() - 0.5);
     var getRandom = Math.floor(Math.random() * padAdsDb.length),
         link = padAdsDb[getRandom].l,
         title = padAdsDb[getRandom].t,
@@ -60,6 +61,7 @@ function desnetRssCb(json) {
 }
 
 function loadVideoAd(video) {
+    padAdsVideoDb = padAdsVideoDb.sort(() => Math.random() - 0.5);
     var getRandom = Math.floor(Math.random() * padAdsVideoDb.length),
         adSrc = padAdsVideoDb[getRandom].v,
         adLink = padAdsVideoDb[getRandom].l,
