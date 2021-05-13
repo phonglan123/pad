@@ -53,11 +53,16 @@ function addScript(src) {
 }
 
 function desnetRssCb(json) {
-    json.feed.entry.forEach(article => padAdsDb.push({
-        l: article.link[4].href,
-        i: defaultValue.blogspotImage,
-        t: article.title.$t
-    }));
+    json.feed.entry.forEach(article => {
+        var thumbnail = defaultValue.blogspotImage;
+        if ('media$thumbnail' in article)
+            thumbnail = article[media$thumbnail];
+        padAdsDb.push({
+            l: article.link[4].href,
+            i: thumbnail,
+            t: article.title.$t
+        });
+    });
 }
 
 function loadVideoAd(video) {
