@@ -144,6 +144,7 @@ for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
         document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
 }
 
+addScript('https://phonglan123.github.io/pad/padAdsBlockDb.js');
 addScript('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 addScript('https://desnetnhaponline.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
