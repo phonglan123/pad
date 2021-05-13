@@ -151,7 +151,6 @@ addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 setTimeout(showPadAds, 500);
 adBlockDetect();
-getDatabase();
 
 var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
