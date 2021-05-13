@@ -146,7 +146,7 @@ addScript('https://code.jquery.com/jquery-3.6.0.slim.min.js');
 addScript('https://desnetnhaponline.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
-docLoaded();
+window.document.onload = docLoaded;
 
 var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
