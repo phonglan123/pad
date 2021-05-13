@@ -22,3 +22,6 @@ adsVideoDb.forEach(entry => padAdsVideoDb.push({
     v: entry.split(' | ')[1],
     t: entry.split(' | ')[2]
 }));
+
+shuffle(padAdsDb);
+shuffle(padAdsVideoDb);
