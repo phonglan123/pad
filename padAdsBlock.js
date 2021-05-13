@@ -35,7 +35,21 @@ async function adBlockDetect() {
     }
 }
 
+function shuffle(array) {
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
 function showPadAds() {
+    shuffle(padAdsDb);
     var getRandom = Math.floor(Math.random() * padAdsDb.length),
         link = padAdsDb[getRandom].l,
         title = padAdsDb[getRandom].t,
@@ -60,6 +74,7 @@ function desnetRssCb(json) {
 }
 
 function loadVideoAd(video) {
+    shuffle(padAdsVideoDb);
     var getRandom = Math.floor(Math.random() * padAdsVideoDb.length),
         adSrc = padAdsVideoDb[getRandom].v,
         adLink = padAdsVideoDb[getRandom].l,
@@ -143,7 +158,7 @@ var adsAlert = 'Được tài trợ',
         v: 'https://a.uguu.se/voFkxbQL.mp4',
         t: 'Quảng cáo PADAD - Xem free'
     }];
-    
+
 addScript('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 addScript('https://desnetnhaponline.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
