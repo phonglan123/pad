@@ -115,34 +115,38 @@ function loadVideoAd(video) {
     video.onended = endTheAd;
 }
 
-var links = document.getElementsByTagName("A"),
-    linksExcept = ['googleusercontent.com', 'blogspot.com', 'blogger'],
-    includesExtra = (originalString, queries) => {
-        var includes = false;
-        queries.forEach(query => originalString.includes(query) ? includes = true : null);
-        return includes;
-    };
+function docLoaded() {
+    var links = document.getElementsByTagName("A"),
+        linksExcept = ['googleusercontent.com', 'blogspot.com', 'blogger'],
+        includesExtra = (originalString, queries) => {
+            var includes = false;
+            queries.forEach(query => originalString.includes(query) ? includes = true : null);
+            return includes;
+        };
 
-for (var i = 0; i < links.length; i++)
-    if (links[i].href.includes("http") && !includesExtra(links[i].href, linksExcept)) {
-        links[i].href = 'https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(links[i].href);
-        links[i].target = "_blank";
-        if (links[i].innerHTML.includes("http"))
-            links[i].innerHTML = links[i].innerHTML.substring(0, links[i].innerHTML.length / 1.5) + "...";
+    for (var i = 0; i < links.length; i++)
+        if (links[i].href.includes("http") && !includesExtra(links[i].href, linksExcept)) {
+            links[i].href = 'https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(links[i].href);
+            links[i].target = "_blank";
+            if (links[i].innerHTML.includes("http"))
+                links[i].innerHTML = links[i].innerHTML.substring(0, links[i].innerHTML.length / 1.5) + "...";
+        }
+
+    for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
+        if (Math.random() * 100 > 60)
+            document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
     }
 
-for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
-    if (Math.random() * 100 > 60)
-        document.getElementsByTagName('video')[i].onplay = (e) => loadVideoAd(e.target);
+    setTimeout(showPadAds, 1000);
+    adBlockDetect();
 }
 
 addScript('https://phonglan123.github.io/pad/padAdsBlockDb.js');
-addScript('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+addScript('https://code.jquery.com/jquery-3.6.0.slim.min.js');
 addScript('https://desnetnhaponline.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 addScript('https://desnetvietnam.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
-setTimeout(showPadAds, 1000);
-adBlockDetect();
+docLoaded();
 
 var adsAlert = 'Được tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
