@@ -3,8 +3,6 @@ Pad = Peta AD (frame). Version cũ của nó là AdsFrame (từng) được lưu
 
 # Các mạng quảng cáo ở đây
 - A-ads
-- Adsterra
-- HilltopAds
 
 # Đăng kí quảng cáo
 <b>Trang đăng kí quảng cáo (điền theo mẫu):</b> https://piecablog.blogspot.com/p/ang-ki-quang-cao-co-mau.html <br/>
