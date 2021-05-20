@@ -13,7 +13,7 @@ Pad = Peta AD (frame). Version cũ của nó là AdsFrame (từng) được lưu
 Hiện nay (tháng 5/2021) thì đang có khoảng 150 quảng cáo được chạy. Nên các bạn có thể tính tỉ lệ hiển thị quảng cáo nôm na là bằng 1/150 (hay khoảng 0.006%). Tức là cứ 150 quảng cáo hiển thị thì sẽ có một cái của bạn. Nhưng bạn cứ yên tâm, bạn mà đăng kí nhiều quảng cáo thì tỉ lệ xuất hiện càng cao.
 
 # Báo cáo quảng cáo
-Tuy nhiên, nếu hệ thống quảng cáo của có vấn đề hoặc các quảng cáo độc hại thì xin bạn bỏ chút thời gian để báo cáo tại trang web: https://piecablog.blogspot.com/p/bao-cao-quang-cao.html
+Tuy nhiên, nếu hệ thống quảng cáo có vấn đề hoặc các quảng cáo độc hại thì xin bạn bỏ chút thời gian để báo cáo tại trang web: https://piecablog.blogspot.com/p/bao-cao-quang-cao.html
 
 # Chèn quảng cáo vào trang/blog của bạn
 ```
