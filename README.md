@@ -1,9 +1,6 @@
 # PAD là gì?
 Pad = Peta AD (frame). Version cũ của nó là AdsFrame (từng) được lưu bên petavietnam.github.io
 
-# Các mạng quảng cáo ở đây
-- A-ads
-
 # Đăng kí quảng cáo
 <b>Trang đăng kí quảng cáo (điền theo mẫu):</b> https://piecablog.blogspot.com/p/ang-ki-quang-cao-co-mau.html <br/>
 <b>Nơi hiển thị quảng cáo:</b>
