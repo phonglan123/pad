@@ -7,7 +7,18 @@ var adsBlockDb = [
     ],
     adsVideoDb = [
         'https://phonglan123.github.io/pad/ | https://www.w3schools.com/html/movie.mp4 | Quảng cáo PADAD - Xem free'
-    ];
+    ],
+    multipleAdd_adsBlock = (times, value) => {
+        for (var i = 0; i < times; i++)
+            adsBlockDb.push(value)
+    },
+    multipleAdd_adsVideo = (times, value) => {
+        for (var i = 0; i < times; i++)
+            adsVideoDb.push(value)
+    };
+
+multipleAdd_adsBlock(250, 'https://viewadsvietnam.blogspot.com/p/vui-long-cho-it-nhat-60-75-giay-e-chung.html | https://mobiwork.vn/wp-content/uploads/2020/12/ti%E1%BB%81n-th%C6%B0%E1%BB%9Fng-sales.jpg | Nhận phần thưởng giá trị - miễn phí - chỉ trong 60s!')
+
 adsBlockDb.forEach(entry => padAdsDb.push({
     l: entry.split(' | ')[0],
     i: entry.split(' | ')[1],
