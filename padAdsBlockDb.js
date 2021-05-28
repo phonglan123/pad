@@ -1,18 +1,11 @@
 var adsBlockDb = [],
     adsVideoDb = [],
-    multipleAdd_adsBlock = (times, value) => {
-        for (var i = 0; i < times; i++)
-            adsBlockDb.push(value)
-    },
-    multipleAdd_adsVideo = (times, value) => {
-        for (var i = 0; i < times; i++)
-            adsVideoDb.push(value)
-    },
     getGGSheetAdsBlock = data => {
         var cells = [];
         data.feed.entry.forEach(entry => cells.push(entry.content['$t']))
         for (var i = 1; i < cells.length / 5; i++)
-            multipleAdd_adsBlock(parseInt(cells[i * 5 + 4]), cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
+            for (var j = 0; j < parseInt((cells[i * 5 + 4]).replace(' quảng cáo', '')); j++)
+                adsBlockDb.push(cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
         adsBlockDb.forEach(entry => padAdsDb.push({
             l: entry.split(' | ')[0],
             i: entry.split(' | ')[1],
@@ -25,7 +18,8 @@ var adsBlockDb = [],
         var cells = [];
         data.feed.entry.forEach(entry => cells.push(entry.content['$t']))
         for (var i = 1; i < cells.length / 5; i++)
-            multipleAdd_adsVideo(parseInt(cells[i * 5 + 4]), cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
+            for (var j = 0; j < parseInt((cells[i * 5 + 4]).replace(' quảng cáo', '')); j++)
+                adsVideoDb.push(cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
         adsVideoDb.forEach(entry => padAdsVideoDb.push({
             l: entry.split(' | ')[0],
             v: entry.split(' | ')[1],
