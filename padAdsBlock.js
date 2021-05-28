@@ -131,7 +131,7 @@ function getDomainName(url) {
 
 function docLoaded() {
     var links = document.getElementsByTagName("A"),
-        linksExcept = ['googleusercontent', 'blogger.com', new URL(location.href).hostname],
+        linksExcept = ['bp.blogspot.com', 'googleusercontent', 'blogger.com', new URL(location.href).hostname],
         includesExtra = (originalString, queries) => {
             var includes = false;
             queries.forEach(query => originalString.includes(query) ? includes = true : null);
