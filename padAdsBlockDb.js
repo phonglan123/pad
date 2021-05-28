@@ -15,10 +15,21 @@ var adsBlockDb = [
     multipleAdd_adsVideo = (times, value) => {
         for (var i = 0; i < times; i++)
             adsVideoDb.push(value)
-    };
-
-multipleAdd_adsBlock(250, 'https://viewadsvietnam.blogspot.com/p/vui-long-cho-it-nhat-60-75-giay-e-chung.html | https://mobiwork.vn/wp-content/uploads/2020/12/ti%E1%BB%81n-th%C6%B0%E1%BB%9Fng-sales.jpg | Nhận phần thưởng giá trị - miễn phí - chỉ trong 60s!')
-
+    }, 
+    getGGSheetAdsBlock = data => {
+  var cells = [];
+  data.feed.entry.forEach(entry => cells.push(entry.content['$t']))
+  for (var i = 1; i < cells.length / 5; i++)
+    multipleAdd_adsBlock(parseInt(cells[i * 5 + 4]), cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
+}, 
+    getGGSheetAdsVideo = data => {
+  var cells = [];
+  data.feed.entry.forEach(entry => cells.push(entry.content['$t']))
+  for (var i = 1; i < cells.length / 5; i++)
+    multipleAdd_adsVideo(parseInt(cells[i * 5 + 4]), cells[i * 5 + 2] + " | " + cells[i * 5 + 3] + " | " + cells[i * 5 + 1])
+};
+addScript('https://spreadsheets.google.com/feeds/cells/1BsMi7V01jgJBKTOQA9wR2tJ8A5yqDhFe12bHpGtGmLA/1/public/values?alt=json-in-script&callback=getGGSheetAdsBlock')
+addScript('https://spreadsheets.google.com/feeds/cells/1g9JDEJGxpwI9_GuNbRVUtSWztNYK__0OhbhbWtDuttM/1/public/values?alt=json-in-script&callback=getGGSheetAdsVideo')
 adsBlockDb.forEach(entry => padAdsDb.push({
     l: entry.split(' | ')[0],
     i: entry.split(' | ')[1],
