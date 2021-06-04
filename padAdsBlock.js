@@ -143,7 +143,7 @@ function docLoaded() {
             links[i].href = 'https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(links[i].href);
             links[i].target = "_blank";
             if (links[i].innerHTML.includes("http"))
-                links[i].innerHTML = new URL(links[i].innerHTML).origin + '/...';
+                links[i].innerHTML = links[i].innerHTML.substring(0, links[i].innerHTML.length / 1.5) + "...";
         }
 
     for (var i = 0; i < document.getElementsByTagName('video').length; i++) {
