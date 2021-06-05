@@ -43,7 +43,7 @@ function showPadAds() {
         imageURL = padAdsDb[getRandom].i,
         elms = document.querySelectorAll("[id='padAdsBlock']");
     for (var i = 0; i < elms.length; i++)
-        elms[i].innerHTML = '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 60px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; margin-top: 8px; background: white; text-align: left;" title="' + adsRegisterTitle + '"> <div style="border: 1px solid #ccc; background: white; position: absolute; margin-top: -1px; width: 100px; text-align: center; margin-left: -1px;" onclick="window.open(' + "'" + adsRegisterLink + "'" + '); showPadAds();">' + adsAlert + '</div> <div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 50px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -60px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + title + '</b></div><div style="width: calc(100% - 115px); overflow: hidden; margin-top: 0px; margin-left: 110px; white-space: nowrap;">' + new URL(link).hostname + '</div></div></div>';
+        elms[i].innerHTML = '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 60px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; margin-top: 8px; background: white; text-align: left;"> <div style="border: 1px solid #ccc; background: white; position: absolute; margin-top: 37px; width: 50px; text-align: center; margin-left: 110px; font-size: 14px;" onclick="window.open(' + "'" + adsRegisterLink + "'" + '); showPadAds();">' + adsAlert + '</div> <div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 50px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -60px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + title + '</b></div><div style="width: calc(100% - 170px); overflow: hidden; margin-top: -2px; margin-left: 165px; white-space: nowrap;">' + new URL(link).hostname + '</div></div></div>';
 }
 
 function addScript(src) {
@@ -164,9 +164,8 @@ addScript('https://miphidili.blogspot.com/feeds/posts/summary?orderby=published&
 addScript('https://piecablog.blogspot.com/feeds/posts/summary?orderby=published&max-results=500&alt=json-in-script&callback=desnetRssCb');
 setTimeout(docLoaded, 1000);
     
-var adsAlert = 'Được tài trợ',
+var adsAlert = 'Tài trợ',
     adsRegisterLink = 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o',
-    adsRegisterTitle = 'Bấm vào chữ Được tài trợ để tìm hiểu thêm',
     adsVideoAlert = 'Bỏ qua trong ? giây|Bỏ qua quảng cáo',
     defaultValue = {
         blogspotImage: 'https://bizflyportal.mediacdn.vn/bizflyportal/1396/2428/2021/04/26/17/17/blo16194106288091.jpg'
