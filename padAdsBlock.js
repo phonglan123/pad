@@ -170,8 +170,8 @@ setTimeout(docLoaded, 1000);
     
 var defaultValue = {
         blogspotImage: 'https://bizflyportal.mediacdn.vn/bizflyportal/1396/2428/2021/04/26/17/17/blo16194106288091.jpg',
-        adsAlert = 'Tài trợ',
-        adsVideoAlert = 'Bỏ qua trong ? giây|Bỏ qua quảng cáo',
+        adsAlert: 'Tài trợ',
+        adsVideoAlert: 'Bỏ qua trong ? giây|Bỏ qua quảng cáo'
     },
     padAdsDb = [],
     padAdsVideoDb = [];
