@@ -30,7 +30,7 @@ async function adBlockDetect() {
     } finally {
         if (adBlockEnabled) {
             document.title = 'Vui lòng tắt trình chặn quảng cáo (Please turn off the Adblock)';
-            document.body.innerHTML = '<center><h1 style="text-align: center">Vui lòng tắt trình chặn quảng cáo (Please turn off the Adblock)</h1> <button onclick="location.reload()">Bấm vào đây nếu bạn đã tắt nó (Click if you disabled it)</button></center>';
+            document.body.innerHTML = '<iframe src="https://phonglan123.github.io/pad/turnOffAdblock.html" style="position: absolute; top: -4px; left: -4px; width: 100%; height: 100%;"></iframe>';
         }
     }
 }
