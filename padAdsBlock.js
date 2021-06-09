@@ -104,7 +104,7 @@ function loadVideoAd(video) {
     adsSkip.innerHTML = defaultValue.adsVideoAlert.split('|')[0].replace('?', adsSkipTimeRemain);
     adsSkip.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; color: red; width: fit-content; padding: 4px; cursor: pointer; user-select: none; margin-top: -45px; z-index: auto; position: absolute; background: white; margin-left: 8px; height: 20px;';
     adsLink.innerHTML = adTitle;
-    adsLink.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; width: 250px; padding: 4px; cursor: pointer; user-select: none; margin-top: -70px; z-index: auto; position: absolute; background: #ccc; margin-left: 8px; height: 20px; overflow: hidden; color: white';
+    adsLink.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; width: 250px; padding: 4px; cursor: pointer; user-select: none; margin-top: -70px; z-index: auto; position: absolute; background: #ccc; margin-left: 8px; height: 20px; overflow: hidden;';
     adsLink.onclick = () => window.open('https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(adLink));
     video.parentNode.replaceChild(wrapper, video);
     wrapper.appendChild(video);
