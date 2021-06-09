@@ -85,7 +85,7 @@ function loadVideoAd(video) {
             if (adsSkipTimeRemain == -1) {
                 clearInterval(adsSkipTimer);
                 adsSkip.innerHTML = defaultValue.adsVideoAlert.split('|')[1];
-                adsSkip.style.color = 'lime';
+                adsSkip.style.color = 'blue';
                 adsSkip.onclick = endTheAd;
             } else
                 adsSkip.innerHTML = defaultValue.adsVideoAlert.split('|')[0].replace('?', adsSkipTimeRemain);
@@ -102,9 +102,9 @@ function loadVideoAd(video) {
         };
 
     adsSkip.innerHTML = defaultValue.adsVideoAlert.split('|')[0].replace('?', adsSkipTimeRemain);
-    adsSkip.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; color: red; width: fit-content; padding: 4px; cursor: pointer; user-select: none; margin-top: -45px; z-index: auto; position: absolute; background: white; margin-left: 8px; height: 20px;';
+    adsSkip.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; color: red; width: fit-content; padding: 4px; cursor: pointer; user-select: none; margin-top: -45px; z-index: auto; position: absolute; background: white; margin-left: 8px; height: 20px; font-style: normal;';
     adsLink.innerHTML = adTitle;
-    adsLink.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; width: 250px; padding: 4px; cursor: pointer; user-select: none; margin-top: -70px; z-index: auto; position: absolute; background: #ccc; margin-left: 8px; height: 20px; overflow: hidden;';
+    adsLink.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; width: 250px; padding: 4px; cursor: pointer; user-select: none; margin-top: -75px; z-index: auto; position: absolute; background: #ccc; margin-left: 8px; height: 20px; overflow: hidden; font-style: normal;';
     adsLink.onclick = () => window.open('https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(adLink));
     video.parentNode.replaceChild(wrapper, video);
     wrapper.appendChild(video);
