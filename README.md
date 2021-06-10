@@ -2,7 +2,6 @@
 Pad = Peta AD (frame). Version cũ của nó là AdsFrame (từng) được lưu bên petavietnam.github.io
 
 # Đăng kí quảng cáo
-<i>Cập nhật ngày 5/6/2021:</i> Xin chào, hệ thống PadAds của chúng tôi đang gặp một số vấn đề. Chúng tôi sẽ không nhận thêm bất kì lượt đăng kí quảng cáo nào. Những quảng cáo đã đăng kí trước đó vẫn sẽ được hiển thị!<br/>
 <b>Trang đăng kí quảng cáo:</b> <br/>
 - Kiểu block: https://forms.gle/gxohiAvHZcMgJeNn7 <br/>
 - Kiểu video: https://forms.gle/jpt2fjBoF8qAVJ3a6 <br/>
@@ -20,3 +19,8 @@ Nếu hệ thống quảng cáo có vấn đề hoặc các quảng cáo độc 
 ```
 <div id="padAdsBlock"></div> <script src="https://phonglan123.github.io/pad/padAdsBlock.js"></script>
 ```
+
+# Các cập nhật, thông báo
+- <i>Cập nhật ngày 28/5/2021</i>: Để phòng tránh tình trạng spam quảng cáo, chúng tôi đã giới hạn mỗi tài khoản Google chỉ được đăng kí quảng cáo một lần.
+- <i>Cập nhật ngày 5/6/2021</i>: Xin chào, hệ thống PadAds của chúng tôi đang gặp một số vấn đề. Chúng tôi sẽ không nhận thêm bất kì lượt đăng kí quảng cáo nào. Những quảng cáo đã đăng kí trước đó vẫn sẽ được hiển thị!
+- <i>Cập nhật ngày 10/6/2021</i>: Sau khi sửa lỗi thành công trên toàn bộ hệ thống, quảng cáo PadAds chính thức hoạt động trở lại, mở form đăng kí mới. Trân trọng!
