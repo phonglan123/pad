@@ -46,8 +46,10 @@ function loadAdsBlockOnElm() {
     var getRandom = Math.floor(Math.random() * padAdsDb.length),
         link = padAdsDb[getRandom].l,
         title = padAdsDb[getRandom].t,
-        imageURL = padAdsDb[getRandom].i;
-    return '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 63px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; background: white; text-align: left;"><div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 53px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -62px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + title + '</b></div><div style="width: calc(100% - 170px); overflow: hidden; margin-left: 165px; white-space: nowrap;">' + new URL(link).hostname + '</div><div style="border: 1px solid #ccc; background: white; margin-top: -18px; width: 50px; max-width: calc(100% - 120px); height: 16px; overflow: hidden; text-align: center; margin-left: 110px" onclick="window.open(' + "'" + 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o' + "'" + '); showPadAds();">' + defaultValue.adsAlert + '</div></div></div>';
+        imageURL = padAdsDb[getRandom].i,
+        adsTitleInnerText = document.createElement('b');
+    adsTitleInnerText.innerText = title;
+    return '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 63px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; background: white; text-align: left;"><div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 53px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -62px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + adsTitleInnerText.innerHTML + '</b></div><div style="width: calc(100% - 170px); overflow: hidden; margin-left: 165px; white-space: nowrap;">' + new URL(link).hostname + '</div><div style="border: 1px solid #ccc; background: white; margin-top: -18px; width: 50px; max-width: calc(100% - 120px); height: 16px; overflow: hidden; text-align: center; margin-left: 110px" onclick="window.open(' + "'" + 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o' + "'" + '); showPadAds();">' + defaultValue.adsAlert + '</div></div></div>';
 }
 
 function addScript(src) {
@@ -75,6 +77,7 @@ function loadVideoAd(video) {
         adSrc = padAdsVideoDb[getRandom].v,
         adLink = padAdsVideoDb[getRandom].l,
         adTitle = padAdsVideoDb[getRandom].t,
+        adsTitleInnerText = document.createElement('b'),
         videoSrc = video.src;
 
     var wrapper = document.createElement('div'),
@@ -103,7 +106,8 @@ function loadVideoAd(video) {
 
     adsSkip.innerHTML = defaultValue.adsVideoAlert.split('|')[0].replace('?', adsSkipTimeRemain);
     adsSkip.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; color: red; width: fit-content; padding: 4px; cursor: pointer; user-select: none; margin-top: -45px; z-index: auto; position: absolute; background: white; margin-left: 8px; height: 20px; font-style: normal;';
-    adsLink.innerHTML = adTitle;
+    adsTitleInnerText.innerText = adTitle;
+    adsLink.innerHTML = adsTitleInnerText.innerHTML;
     adsLink.style = 'border: 1px solid #ccc; box-shadow: 0 0 8px 0 #ccc; width: 250px; padding: 4px; cursor: pointer; user-select: none; margin-top: -75px; z-index: auto; position: absolute; background: #ccc; margin-left: 8px; height: 20px; overflow: hidden; font-style: normal;';
     adsLink.onclick = () => window.open('https://phonglan123.github.io/pad/go.html?target=' + encodeURIComponent(adLink));
     video.parentNode.replaceChild(wrapper, video);
