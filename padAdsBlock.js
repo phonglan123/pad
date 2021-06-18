@@ -160,6 +160,7 @@ function docLoaded() {
     }
 
     setTimeout(showPadAds, 1000);
+    setInterval(showPadAds, 30000);
     adBlockDetect();
 }
 
