@@ -49,7 +49,7 @@ function loadAdsBlockOnElm() {
         imageURL = padAdsDb[getRandom].i,
         adsTitleInnerText = document.createElement('b');
     adsTitleInnerText.innerText = title;
-    return '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 63px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; background: white; text-align: left;"><div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();"> <img src="' + imageURL + '" style="margin: 5px; height: 53px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -62px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden;"><b>' + adsTitleInnerText.innerHTML + '</b></div><div style="width: calc(100% - 170px); overflow: hidden; margin-left: 165px; white-space: nowrap;">' + new URL(link).hostname + '</div><div style="border: 1px solid #ccc; background: white; margin-top: -18px; width: 50px; max-width: calc(100% - 120px); height: 16px; overflow: hidden; text-align: center; margin-left: 110px" onclick="window.open(' + "'" + 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o' + "'" + '); showPadAds();">' + defaultValue.adsAlert + '</div></div></div>';
+    return '<iframe src="https://phonglan123.github.io/pad/" style="position: absolute; top: -1000px; left: -1000px"></iframe><div style="border: 1px solid #ccc; height: 63px; width: 100%; user-select: none; cursor: pointer; font: 15px Arial, sans-serif; margin: auto; background: white; text-align: left;"><div onclick="window.open(' + "'https://phonglan123.github.io/pad/go.html?target=" + encodeURIComponent(link) + "'" + '); showPadAds();" style="font-weight: bold;"> <img src="' + imageURL + '" style="margin: 5px; height: 53px; width: 100px"/> <div style="width: calc(100% - 115px); margin-top: -60px; margin-left: 110px; text-align: justify; height: 37px; overflow: hidden; color: blue;">' + adsTitleInnerText.innerHTML + '</div><div style="width: calc(100% - 137px); overflow: hidden; margin-left: 132px; white-space: nowrap; font-weight: normal;">' + new URL(link).hostname + '</div><div style="border: 1px solid #ddd; background: white; margin-top: -18px; width: 16px; max-width: calc(100% - 120px); height: 16px; overflow: hidden; text-align: center; margin-left: 110px" onclick="window.open(' + "'" + 'https://github.com/phonglan123/pad/blob/main/README.md#%C4%91%C4%83ng-k%C3%AD-qu%E1%BA%A3ng-c%C3%A1o' + "'" + '); showPadAds();">?</div></div></div>';
 }
 
 function addScript(src) {
@@ -174,7 +174,6 @@ setTimeout(docLoaded, 1000);
     
 var defaultValue = {
         blogspotImage: 'https://bizflyportal.mediacdn.vn/bizflyportal/1396/2428/2021/04/26/17/17/blo16194106288091.jpg',
-        adsAlert: 'Tài trợ',
         adsVideoAlert: 'Bỏ qua trong ? giây|Bỏ qua quảng cáo'
     },
     padAdsDb = [],
