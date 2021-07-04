@@ -24,3 +24,4 @@ Nếu hệ thống quảng cáo có vấn đề hoặc các quảng cáo độc 
 - <i>Cập nhật ngày 28/5/2021</i>: Để phòng tránh tình trạng spam quảng cáo, chúng tôi đã giới hạn mỗi tài khoản Google chỉ được đăng kí quảng cáo một lần.
 - <i>Cập nhật ngày 5/6/2021</i>: Xin chào, hệ thống PadAds của chúng tôi đang gặp một số vấn đề. Chúng tôi sẽ không nhận thêm bất kì lượt đăng kí quảng cáo nào. Những quảng cáo đã đăng kí trước đó vẫn sẽ được hiển thị!
 - <i>Cập nhật ngày 10/6/2021</i>: Sau khi sửa lỗi thành công trên toàn bộ hệ thống, quảng cáo PadAds chính thức hoạt động trở lại, mở form đăng kí mới. Trân trọng!
+- <i>Cập nhật ngày 4/7/2021</i>: Dự án chính thức ngừng phát triển vô thời hạn. Chúng tôi sẽ không chịu trách nhiệm với bất kì lỗi nào xảy ra!
